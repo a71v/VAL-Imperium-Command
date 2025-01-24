@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizational Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2e;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .chart-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            text-align: center;
+            max-width: 1200px;
+        }
+
+        .box {
+            background: #28293e;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .box.highlight {
+            background: #3b3b5c;
+            border: 1px solid #666;
+        }
+
+        .group {
+            grid-column: span 5;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ffa500;
+        }
+
+        .subgroup {
+            grid-column: span 5;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #00bfff;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <!-- Top Level -->
+        <div class="group">Imperial Command</div>
+        <div class="box highlight">Vaktus<br><small>Emperor of Vaktovia</small></div>
+        <div class="box">Serverless<br><small>Governor</small></div>
+
+        <!-- Internal Affairs Section -->
+        <div class="subgroup">Internal Affairs</div>
+        <div class="box">Faxyst<br><small>Viacom Overseer</small></div>
+        <div class="box">Vacant Spot<br><small>Viacom Manager</small></div>
+
+        <!-- Departments -->
+        <div class="subgroup">Justice Department</div>
+        <div class="box">Vacant Spot<br><small>Head of Department</small></div>
+        <div class="box">Soupy_S<br><small>Manager</small></div>
+
+        <div class="subgroup">Blacklist Department</div>
+        <div class="box">Highly<br><small>Head of Department</small></div>
+        <div class="box">ImageMaterial<br><small>Manager</small></div>
+
+        <div class="subgroup">Merit Department</div>
+        <div class="box">Mitsuhami_Yamizu<br><small>Head of Department</small></div>
+        <div class="box">Vacant Spot<br><small>Manager</small></div>
+
+        <!-- Add more sections as needed -->
+    </div>
+</body>
+</html>
